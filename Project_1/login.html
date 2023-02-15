@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href ="styles.css">
+    <title>LOGIN</title>
+    <style>
+        h1{
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+       }
+       
+       form {
+           left      : 50%;
+           top       : 50%;
+           position  : absolute;
+           transform : translate(-50%, -50%);
+           padding:15px;
+           background-color:rgb(220, 220, 220);
+           border-radius:5px;
+           width: 370px;
+           text-align: center;
+           box-shadow: 5px 5px 15px grey ;
+       }
+       
+       nav input {
+           width: 350px;
+           padding: 10px;
+           margin: 0;
+           border-radius: 5px;  
+           border: none;
+       }
+       #submit{
+           background-color: greenyellow;
+           color: black;
+           width: 370px;
+           border:inset 2px black;
+       }
+       #submit:hover{
+           background-color: green;
+           color: white;
+       }
+       
+       .button{
+           width: 40px;
+           height: 40px;
+           border-radius: 50px;
+           font-size: 20px;
+           background-color: white;
+           border-style:double;
+       }
+       #google:hover,#facebook:hover,#linkedIn:hover{
+           background: green;
+           color: white;
+           border-color: white;
+           cursor: pointer;
+       }
+       #google{
+           border-color: red;
+           color: red;
+        
+       }
+       #facebook{
+           border-color: blue;
+           color: blue;
+       }
+       #linkedIn{
+           border-color: rgb(12, 12, 193);
+           color: rgb(12, 12, 193);
+       }
+       </style>
+</head>
+<body>
+    <form>
+        <h1>Login</h1>
+        <br><br>
+        <div>
+           <a href="https://myaccount.google.com/" target="_blank"><input type="button" id="google" class="button" value="G"></href></a>
+           <a href="https://www.facebook.com/login/" target="_blank"><input type="button" id="facebook" class="button" value="f"></href></a>
+           <a href="https://www.linkedin.com/login/tr" target="_blank"><input type="button" id="linkedIn" class="button" value="in"></href></a>
+            <br><br>
+        </div>
+        <nav>
+           
+            <input type="email" id="email" required placeholder="Your email">
+            <br><br>
+            <input type="password" id="password" required placeholder="Password">
+            <br><br><br>
+            <input type="submit" id="submit" value="Submit">
+
+        </nav>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arduino Uno</title>
+    <style>
+        .grid-container {
+            display: grid;
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            width: 75%;
+            min-width: 600px;
+            min-height: 753.60px;
+            left: 12.5%;
+            grid-template-columns: auto 25% 25% 25%;
+            grid-template-rows: 40% 35% 25% ;
+            background-color:white;
+            gap: 10px;
+        }
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color:  white;
+            height: 291px;
+            border-bottom: solid 5px rgb(245, 245, 245) ;
+            border-top: solid 5px  rgb(245, 245, 245);
+        }
+        h2{
+            margin-top: 0px;
+            border-left: 9px;
+        }
+        h3{
+            color: rgb(47, 47, 172);
+        }
+        hr{
+            color: gray; margin-top:0 ;
+        }
+        .item2 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color:  rgb(245, 245, 245);
+
+        }
+        .blue{
+            border-left: solid blue 5px;
+            font-size:16px;
+        }
+        .green{
+            border-left: solid green 5px;
+            font-size:16px;
+        }
+        #ard{
+            color: rgb(97, 216, 255) ;
+            font-size: 16px;
+        }
+        #fiyat{
+            font-size: 20px ;
+            color: rgb(97, 216, 255);
+        }
+        #liste-buton{
+            border: 0; 
+            font-size: 18px;
+            font-weight: bold;
+            color: green; 
+            background: none;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #sepet{
+            background-color: green; 
+            font-size:12px;
+            color: white; 
+            border-radius: 2px;
+            margin-left: 10px;
+            padding: 5px;
+            font-size: 17px;
+            border:none;
+            cursor: pointer;
+            height: 30px;
+            width: 102px;
+        }
+        #sepet:hover{
+
+            background-color: blue; 
+        }
+        .item3 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            min-height: 100%;
+
+        }
+        .item4 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            min-height: 100%;
+        }
+        img{
+            width:100%;
+            height: 291px;
+        }
+        li{
+        font-size: 16px;
+        }
+        table{
+        width: 100%;
+        border-collapse:collapse;
+        }
+        td,th {
+        border: 1px solid #eeeaea;
+        }
+        tr{
+            text-align: left;
+        }
+        tr:nth-child(even) {
+        background-color:#f2f2f2;
+        }
+        thead{
+        border: 1.5px solid #f0eaea;
+        background-color:  rgb(225, 221, 221);
+        }
+        tbody tr:hover{
+        background-color: gray;
+        color: white;
+        }
+        #stripe {
+            font-size: 0;
+        }       
+        .minus, .plus, .text{
+            width: 34px;
+            height: 30px;
+            border: 1px solid blue;
+        }
+        .minus{
+            margin-left: 10px;
+        }
+        .minus:hover, .plus:hover{
+            background-color: #47B5FF;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <img src="arduino.jpg" alt="arduino">
+        </div>
+
+        <div class="item2">
+             <h2>&nbsp&nbsp;Orijinal Arduino Uno Mini - Limited Edition</h2>
+     
+            <p class="blue" > &nbsp; Marka/Menşei: <small id="ard"><b>Arduino</b></small></p>
+            <p class="green"> &nbsp; Stok Kodu: 20530</p>
+            <p class="blue"> &nbsp; 765,66 TL + KDV</p>
+            <p class="green" id="fiyat" ><b> &nbsp; 903,48 TL KDV Dahil</b></p>
+            <p class="blue" id="stripe">
+                <button class="minus" >-</button>
+                <button class="text" >1</button>
+                <button class="plus">+</button>
+                <button class="sepet" id="sepet">Sepete Ekle</button>
+            </p>
+            <p class="green">&nbsp;<input type="button" id="liste-buton"value="* Alışveriş Listeme Ekle"> </p>
+        
+        </div>
+        
+        <div class="item3">
+            <h3>Orijinal Arduino Uno Mini Özellikleri<hr></h3> 
+            <ul>
+                    <li>6 adet PMW çıkışı sağlayan 14 digital I/O pini </li>
+                    <li>6 anolog giriş pini </li>
+                    <li>16MHz seramik rezonatör</li>
+                    <li>USB-C bağlantı noktası</li>
+                    <li>USB veya harici bir güç kaynağı ile çalışır</li>
+                    <li>Yeniden başlatma tuşu</li>
+                    <li>Anahtar bileşenler</li>
+                    <li>Mikroçip Teknolojisi ATmega328 MCU</li>
+                    <li>USB Denetleyicili Mikroçip Teknolojisi ATmegal16U2 MCU</li>
+            </ul>
+        </div>
+
+        <div class="item4">
+             <h3>Teknik Özellikleri<hr></h3> 
+            <table>
+                <thead>
+                    <tr>
+                       <th>Üretici Firma</th>
+                       <th>Arduino</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                       <td>SRAM</td>
+                       <td>2KB</td>
+                    </tr>
+                     <tr>
+                       <td>Ürün Boyutları</td>
+                       <td>10.9 x 9.09 x 5 cm</td>
+                    </tr>
+                    <tr>
+                        <td>Ürün Ağırlığı</td>
+                        <td>73.6 gr</td>
+                    </tr>
+                </tbody>
+            </table>       
+        
+        </div>
+    </div>
+      
+</body>
+
+</html>
