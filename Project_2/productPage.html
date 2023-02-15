@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Responsive Product Page </title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #info{
+            width: 47%;
+            border-top: 1px rgb(226, 216, 216) solid;
+            padding-top: 30px;
+        }
+        p{
+            display: inline-flex;
+            font-size: 14px !important;
+        }
+        #first{
+            width: 70%;
+        }
+        #card-2{
+            background-color: #f4f4f4;
+        }
+        h1, h2 , h3, h4, h5, h6{
+            margin-bottom: 0%;
+        }
+        .flex-container{
+            display: flex!important;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        i{
+            color: orange;
+            font-size: 14px;
+        }
+        #div-white{
+            background: white;
+            display: inline-flex;
+            font-size: 12px;
+            padding:5px ;
+            border:solid 1px gray ;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        #div-white p{
+            margin: 0%;
+        }
+        div > #puan{
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-left: solid gray 1px !important;
+            border-right: solid gray 1px !important;
+        }
+        .bg-success{
+            font-size: 11px !important;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10%;
+        }
+        .soru-işareti{
+            border-radius: 15px;
+            padding: 0.5px 5px;
+            font-size:9px !important;
+            background-color: rgb(202, 198, 198)  !important;
+        }
+        #soru .soru-işareti{
+            background-color: white  !important;
+            color: gray ;
+            font-size: 18px !important;
+            font-weight: bold;
+            padding: 0.5px 10px;
+            margin-bottom: 0%;
+        }
+        #satıcı .soru-işareti{
+            background-color: rgb(189, 183, 183)  !important;
+            color: rgb(69, 69, 69) ;
+            font-size: 16px !important;
+            font-weight: bold;
+            padding: 0.5px 9px;
+            margin-bottom: 0%;
+        }
+        #second-circle{
+            font-size:12px !important;
+            background-color: #ff6000 !important;
+            padding: 0.5px 6px;
+            border-radius: 15px;
+        }
+        .text-success{
+            font-size: 11px !important;
+        }
+        hr{
+            margin-top: 0%;
+            margin-bottom: 16px;
+        }
+        .minus, .plus{
+        border-radius: 8px;
+        width: 2em;
+        height: 2.5em;
+        font-weight: bold; 
+        background-color:rgb(184, 184, 184);
+        border: 0px;
+        padding: 0px;
+        }
+        .adet{
+            background-color: white;
+            border: 0px;
+            font-size: 10px;
+        }
+        .flex{
+            display: inline-flex;
+            background-color:rgb(184, 184, 184)  ;
+            border: rgb(184, 184, 184) 2px ;
+            border-style: solid;
+            border-radius: 8px;
+        }
+        .fa-cart-shopping{
+            color: white;
+        }
+        #sepet{
+            background-color: #ff6000;
+            color: white;
+            font-size: 14px;
+            border: 0px;
+            border-radius: 8px;
+            height: 44px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        #faydalan{
+            background-color: white;
+            font-size: 12px;
+            font-weight: bold ;
+            height: 28px;
+            border: 2px solid #d8d3d3;
+            border-radius: 8px;
+            padding: 0px 10px;
+            margin-left: 12px;
+        }
+        #soru{
+            background-color: rgb(239, 231, 246);
+            border: solid rgb(183, 135, 219) 1px;
+            padding: 15px 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        #soru p{
+            margin: 0%;
+        }
+        #soru div{
+            display: inline-flex;
+        }
+        #icons-div i{
+            color: rgb(134, 134, 134);
+            font-size: 22px;
+            margin-right: 5px;
+        }
+        #icons-div p{
+            margin-right: 20px;
+        }
+        dl{
+            font-size: 12px;
+            margin: 0%;
+        }
+        #konum{
+            background-color: #ffefe5;
+            color: #ff6000;
+            font-size: 12px;
+            font-weight: bold;
+            border: 0px;
+            margin: 0%;
+            height: 30px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        #konum i{
+            color: #ff6000;
+        }
+        .img2{
+
+            height: 20px;
+            width: 100px;
+        }
+        #teslimat-satıcı{
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        #teslimat-satıcı p{
+            margin-bottom: 0%;
+        }
+        #orange{
+            color: #ff6000;
+        }
+        #satıcı{
+            margin:25px 0px;
+        }
+        #diğer-seç{
+            align-items: baseline;
+        }
+        #sepet-2{
+            background-color: #ff6000;
+            color: white;
+            font-size: 14px;
+            border: 0px;
+            border-radius: 8px;
+            padding: 5px 10px;
+        }
+        #display{
+            display: none;
+        }
+        @media(max-width:992px){
+            #none{
+                display: none;
+            }
+            #flex-container-1{
+                margin: 0px 50px;
+            }
+            #display{
+                display:block ;
+            }
+            #div-white
+            {
+                margin-left: 25%;
+                margin-right: 25%;
+            }
+            #buttons{
+              display: flex;
+              justify-content: center;
+            }
+            #buttons #sepet{
+                margin-left: 15px;
+            }
+            #icons-div{
+                margin-left: 10%;
+            }
+            .teslimat-2{
+                background-color: #f4f4f4 !important;
+                border: 1px #d8d3d3 solid;
+                margin-left: 8%;
+                margin-right: 8%;
+            }
+            #satıcı{
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
+     </style>
+
+</head>
+<body>
+    <div class="row">
+        <div class="card-fluid col-lg-6" id="card-1">
+            <div class="card-body flex-container">
+                <img class="card-img-top" src="img/kulaklik.jfif" alt="Card image">
+                    <div id="info">
+                            <div> 
+                                <p id="first" class="font-weight-bold">Çift Telefon Desteği</p>
+                                <p class="font-weight-normal" >Yok</p>
+                            </div>
+                            <div>
+                                <p id="first" class="font-weight-bold">Suya & Tere Dayanıklı</p>
+                                <p  class="font-weight-normal">Hayır</p>
+                            </div>
+                            <div>
+                                <p id="first" class="font-weight-bold">Kullanım Tipi</p>
+                                <p  class="font-weight-normal">Kulakiçi</p>
+                            </div>
+                    </div>
+                    <div id="info">
+                            <div>
+                                <p id="first" class="font-weight-bold">Bluetooth Versiyon</p>
+                                <p  class="font-weight-normal">5.0</p>
+                            </div>
+                            <div>
+                                <p id="first" class="font-weight-bold">Aktif Gürültü Önleme<br>(ANC)</p>
+                                <p class="font-weight-normal">Yok</p> 
+                            
+                            </div>
+                    </div>
+            </div>
+        </div>
+        <div class="card-fluid col-lg-6" id="card-2">
+            <div class="card-body" id="body-2">
+                <h5 class="font-weight-bold" id="none">TWS i12 Bluetooth 5.0 Kulaklık - Şarj Üniteli</h5>
+                <h5 class="text-primary" id="none">TWS</h5>
+                <div class="flex-container" id="flex-container-1">
+                    <div>
+                        <h1 class="font-weight-bold">115,00 <small><small><small><b>TL</b></small></small></small></h1>
+                        <p class="font-weight-normal" id="none">19 TL x 6 aya varan&nbsp;<b>Taksitle</b></p>
+                    </div>
+                    <div class="text-right">
+                        <h5 class="font-weight-normal">3,5
+                        <span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i></span></h5>
+                        <p><small class="font-weight-bold"> 7469 Değerlendirme</small></p>
+                    </div>  
+                </div>
+
+                <div id="display" class="text-center">
+                    <p class="font-weight-normal" >19 TL x 6 aya varan&nbsp;<b>Taksitle</b></p>
+                </div>
+
+                <div id="div-white">
+                    <p class="text-muted">Satıcı:&nbsp; <span class="text-primary"> SFIT TEKNOLOJI...</span></p>
+              
+                    <div id="puan">
+                        <p class="text-muted">Puan</p> 
+                        <p class="bg-success text-white">9,4</p>
+                        <p class="soru-işareti text-dark"><b>?</b></p> 
+                    </div>
+        
+                    <p><b> Kampanyaları Gör &nbsp;</b></p>
+                    <p class="text-white" id="second-circle" >3</p>
+                </div>
+
+                <p class="text-success font-weight-bold" id="none">Seçili Telefon Alana TWS i12 Bluetooth 5.0 Kulaklık %10 İndirimli!</p>
+                <hr>
+                <div id="buttons">
+                        <div class="flex">
+                            <button class="minus">-</button>
+                            <button class="adet "><b>1</b> <br> <span  class="text-muted" > Adet</span>   </button>
+                            <button class="plus">+</button>                                                                      
+                        </div>
+                        <button id="sepet"> <i class="fa-solid fa-cart-shopping"> </i> &nbsp; Sepete Ekle </button> 
+                </div>
+                <div id="soru" class="flex-container">
+                    <p>Eski ürününü yenisi ile değiştirmek ister misin?</p>
+                    <div class="text-right">
+                        <p class="soru-işareti">?</p>
+                        <button id="faydalan">Faydalan</button>
+                    </div>
+                
+                </div>
+                <div id="icons-div">
+                        <p class="text-muted"> <i class="fa-regular fa-heart"></i>Beğen</p>
+                        <p class="text-muted"> <i class="fa-regular fa-bookmark"></i>Listeme Ekle</p>
+                        <p class="text-muted"> <i class="fa-solid fa-arrow-right-arrow-left"></i> Karşılaştır</p>
+                </div>
+                <hr>
+                <div id="teslimat-satıcı">
+                    <div class="flex-container">
+                        <h6 class="font-weight-bold">Teslimat Seçenekleri </h6>
+                        <button id="konum"><i class="fa-sharp fa-solid fa-location-dot"></i> Konum Seç</button> 
+                    </div>
+                    <div class="flex-container">
+                        <dl>
+                            <dt>Standart Teslimat</dt>
+                            <dd>En geç <b>14 Ekim Cuma</b> günü kargoda</dd>
+                        </dl>
+                        <img src="img/hepsijet.jpg" alt="" class="img2">
+                    </div>               
+                </div>
+                <div id="satıcı"class="flex-container">
+                        <h5 class="font-weight-bold">Diğer Satıcılar - <span id="orange"> Tümü (2)</span></h5>              
+                        <p class="soru-işareti">?</p>
+                </div>
+                <div id="teslimat-satıcı" class="teslimat-2">
+                        <div>
+                            <p class="bg-success text-white">9,7</p>
+                            <p  class="text-primary font-weight-bold" >Torima</p>
+                        </div>
+                        <div class="flex-container" id="diğer-seç">  
+                            <p><b> 21 saat 42 dakika</b>&nbsp;içinde sipariş verirsen yarın kargoda</p>
+                            <h5>148,97</h5>
+                            <button id="sepet-2">Sepete Ekle</button>
+                        </div>            
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
