@@ -1,0 +1,82 @@
+*{
+    font-size: 14px;
+}
+.buttons .btn{
+    width: 75px !important;
+    padding: 2px;
+}
+.buttons{
+    min-width: 250px;
+}
+#ekle_btn{
+    margin-right: 2% !important;
+}
+h3{
+    padding-left: 3%;
+}
+.top{
+    margin-left: 3% !important;
+    margin-right: 2% !important;
+}
+#pag_options {
+    height: 24px;
+}
+#pag_options .btn{
+    height: 28px;
+}
+#page .btn{
+    height: 30px;
+    width: 30px;
+}
+th{
+    padding: 4px !important;
+}
+td{
+    height: 38px;
+    padding: 4px !important;
+    border: 0px !important;
+}
+tr{
+    height: 38px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+footer{
+    padding-left: 3%;
+    padding-right: 2%;
+}
+tr:nth-child(even){
+background-color:#dde5ff
+}
+tr:nth-child(odd){
+background-color: white
+}
+img{
+    width: 80px;
+}
+.btn.active {
+    background-color: blue !important;
+    color: white !important;
+}
+.tablo{
+    width: 100%;
+}
+#modalbutton{
+    position: absolute;
+    right: 10px;
+}
+/* öğrenci no kolonu yok olur, açılan formdaki input alanları genişler*/
+@media screen and ( max-width: 768px) {
+    #no{
+        display: none;
+    }
+    input{
+        width: 100%;
+    }
+}
+/* bolum kolonu yok olur */
+@media screen and ( max-width: 992px) {
+    #bolum{
+        display: none;
+    }
+}
