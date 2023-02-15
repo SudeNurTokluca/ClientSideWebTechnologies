@@ -1,0 +1,32 @@
+*{
+    transition: 0.5s;
+}
+#calc{
+    width: 360px;
+    background-color: rgb(13, 67, 84);
+    margin-top: 50px !important;
+}
+#header{
+    height: 30px;
+}
+#screen{
+    height: 100px;
+}
+.op{
+    height: 50px;
+    width: 23%;
+    border-radius: 8%;
+    border: 0px;
+}
+.op:hover{
+    background-color: #999 !important;
+}
+#equal:hover{
+    background-color: rgb(103, 187, 213) !important;
+}
+span:hover{
+    color: blue;
+}
+#current{
+    min-height: 25px; 
+}

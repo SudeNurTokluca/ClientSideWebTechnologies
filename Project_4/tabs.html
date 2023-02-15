@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABS</title>
+    <style>
+        .tab{
+            display: none;
+            background-color: palevioletred;
+        }
+        .btn{
+            background-color: rgb(213, 218, 223);
+            border: 0px;
+            border-right: 3px black solid;
+            margin: 0px;
+            text-align: center;
+            width: 25%;
+            font-size: 18px;
+            height: 50px;
+        }
+        #btn4{
+            border:0px;
+        }
+        .container{
+            width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        p{
+            font-size: 18px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+    <button onclick="show(1)" class="btn" >Tab1</button>
+    <button  onclick="show(2)" class="btn">Tab2</button>
+    <button  onclick="show(3)" class="btn">Tab3</button>
+    <button onclick="show(4)"class="btn" >Tab4</button>
+    <div id="tab1" class="tab"><p id="p-1"></p></div>
+    <div id="tab2" class="tab"> <p id="p-2"></p> </div>
+    <div id="tab3" class="tab"> <p id="p-3"></p> </div>
+    <div id="tab4" class="tab"> <p id="p-4"></p> </div>
+    </div>
+
+    <script>
+        show(1);
+        for(var i=0;i<10;i++)
+        {
+            for(var j=0;j<14;j++){
+                document.getElementById("p-1").innerHTML+="111 "
+            }
+        }
+        document.getElementById("p-1").style.fontSize="19px"
+        for( i=0;i<10;i++)
+        {
+            for( j=0;j<14;j++){
+                document.getElementById("p-2").innerHTML+="222 "
+            }
+        }
+        for( i=0;i<10;i++)
+        {
+            for( j=0;j<14;j++){
+                document.getElementById("p-3").innerHTML+="333 "
+            }
+        }
+        for( i=0;i<10;i++)
+        {
+            for( j=0;j<14;j++){
+                document.getElementById("p-4").innerHTML+="444 "
+            }
+        }
+         function show(id){
+            let tabs= document.querySelectorAll('.tab');
+            let btns=document.querySelectorAll('.btn');
+            btns.forEach((item)=>{
+                item.style.borderRight ="3px black solid";
+                item.style.backgroundColor="rgb(213, 218, 223)";
+            });
+            btns[3].style.borderRight ="0px";
+            tabs.forEach((item) => item.style.display="none");
+
+            if(id==1)
+            {
+                tabs[0].style.display="block";
+                btns[0].style.border="0px";
+                btns[0].style.backgroundColor="palevioletred";
+            }
+            else if(id==2){
+                tabs[1].style.display="block";
+                btns[1].style.border="0px";
+                btns[1].style.backgroundColor="palevioletred";
+            }
+            else if(id==3){
+                tabs[2].style.display="block";
+                btns[2].style.border="0px";
+                btns[2].style.backgroundColor="palevioletred";
+            }
+            else if(id==4){
+                tabs[3].style.display="block";
+                btns[3].style.border="0px";
+                btns[3].style.backgroundColor="palevioletred";
+            }
+           }
+    </script>
+</body>
+</html>

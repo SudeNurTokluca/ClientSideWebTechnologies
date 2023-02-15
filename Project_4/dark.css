@@ -1,0 +1,21 @@
+#calc{
+    background:rgb(35, 34, 34);
+    border:solid 1px black;
+}
+.op{
+    background:rgb(82, 82, 82);
+    color:white;
+}
+#equal{
+    background:rgb(13, 67, 84);
+}
+#screen{
+    background:rgb(13, 67, 84);
+    border:solid 5px white;
+}
+#header{
+    color:white;
+}
+#screen{
+    color:white;
+}
